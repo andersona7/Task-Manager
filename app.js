@@ -39,6 +39,10 @@ app.use("/",pageRoutes);
 
 app.use("/",taskRoutes);
 
+app.use((req, res, next) => {
+    res.status(404).render('pages/404pagenotfound',{title:"Page Not Found"}); 
+});
+
 app.listen(3000,()=>{
     console.log("Server started running in port 3000")
 });
