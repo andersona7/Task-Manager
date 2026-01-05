@@ -1,0 +1,27 @@
+<%- include("../partials/header") %>
+<div class="outer-profile-container">
+    <div class="profile-container">
+        <div class="profile-card">
+        <div class="img-container">
+            <img src="<%= locals.user.profile %>" alt="Profile" class="profiledp">
+        </div>
+        <div class="detials-container">
+            <div class="row">
+                <p class="label">Name</p>
+                <p class="colon">:</p>
+                <p class="value"><%= locals.user.name %></p>
+            </div>
+            <div class="row">
+                <p class="label">User Name</p>
+                <p class="colon">:</p>
+                <p class="value"><%= locals.user.username %></p>
+            </div>
+            <div class="row">
+                <p class="label">Email</p>
+                <p class="colon">:</p>
+                <p class="value"><%= locals.user.email %></p>
+            </div>
+        </div>
+    </div>
+</div></div>
+<%- include("../partials/footer") %>

@@ -1,0 +1,22 @@
+<%- include("../partials/header") %>
+    <div class="task-container">
+        <div class="task-header">
+            <h1>Your Tasks</h1>
+            <% tasks.forEach(task=>{%>
+                <div class="each-task">
+                    <h3>
+                        <%= task.title %>
+                    </h3>
+                    <p>
+                        <%= task.description %>
+                    </p>
+                    <div class="action-tab">
+                        <a class="edit-btn" href="/tasks/<%= task._id %>/edit">Edit</a>
+                        <button type="submit" onclick="showDeleteModal('<%= task._id %>')">Delete</button>
+                    </div>
+                </div>
+                <% }) %>
+                    <a class="add-hf-ind" href="/tasks/new">Add New Task</a>
+        </div>
+    </div>
+    <%- include("../partials/footer") %>

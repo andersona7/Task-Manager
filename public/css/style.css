@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #d4e3f1;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer-head {
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.header {
+    width: 80%;
+    margin: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    background-color: rgb(255, 255, 255);
+}
+
+.header a {
+    color: #2a55aa;
+    text-decoration: solid;
+    margin: 0rem .7rem;
+    font-weight: bold;
+}
+
+.header h2 {
+    display: inline;
+    color: #2563eb;
+}
+
+footer {
+    text-align: center;
+    color: #2a55aa;
+}
+
+.outer-foot {
+    padding: 12px;
+}
+
+.main {
+    flex: 1;
+}
+
+@media (max-width:530px) {
+
+    .header h2 {
+        display: block;
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .header {
+        display: inline-block;
+        font-size: .8rem;
+    }
+
+    .header nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-home {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .task-header {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+}
+
+@media (min-width:750px) {
+
+    .main-home {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .login-container {
+        max-width: 30%;
+    }
+
+    .create-task-container {
+        max-width: 50%;
+    }
+}
+
+
+
+
+/*for home.ejs*/
+.main-home {
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    margin: 1rem 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+}
+
+.tsk-btn:hover {
+    background-color: #2a55aa;
+}
+
+.tsk-btn {
+    display: block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: solid;
+    font-weight: bold;
+    margin: 1.5rem 0rem;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    border-radius: 10px;
+}
+
+.outer-main-home {
+    display: flex;
+    justify-content: center;
+}
+
+/* for login*/
+.outer-login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    width: 80%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.596);
+    margin: 1rem 1rem;
+    color: #2a55aa;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+}
+
+.login-container input {
+    background-color: white;
+    color: #2a55aa;
+    text-decoration: none;
+    padding: 1rem;
+    width: 53%;
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    border-color: #2a55aa;
+}
+
+.login-container button {
+    display: block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: solid;
+    font-weight: bold;
+    margin: 1rem 0rem;
+    text-align: center;
+    justify-self: center;
+    padding: 1rem;
+    width: 32%;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    border-radius: 10px;
+    border-style: none;
+}
+
+.login-container a {
+    text-decoration: none;
+    color: #2a55aa;
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+
+/*for new task page */
+.outer-create-task-container {
+    display: flex;
+    justify-content: center;
+}
+
+.create-task-container {
+    width: 80%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.596);
+    margin: 1rem 1rem;
+    color: #2a55aa;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+}
+
+.create-task-container input {
+    background-color: white;
+    color: #2a55aa;
+    text-decoration: none;
+    padding: 1rem;
+    width: 53%;
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #2a55aa;
+}
+
+.create-task-container textarea {
+    background-color: white;
+    color: #2a55aa;
+    text-decoration: none;
+    padding: 1rem;
+    width: 53%;
+    resize: none;
+    min-height: 4rem;
+    margin: 1rem 0rem;
+    border-radius: 10px;
+    border-color: #2a55aa;
+    border-width: 2px;
+}
+
+.create-task-container button {
+    display: block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: solid;
+    font-weight: bold;
+    margin: 1rem 0rem;
+    text-align: center;
+    justify-self: center;
+    padding: 1rem;
+    width: 32%;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    border-radius: 10px;
+    border-style: none;
+}
+
+button:hover {
+    background-color: #2a55aa;
+}
+
+/*for task index*/
+
+.task-container {
+    display: flex;
+    justify-content: center;
+}
+
+.task-header h1 {
+    grid-column: 1 / -1;
+}
+
+.add-hf-ind {
+    grid-column: 1 / -1;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    max-width: max-content;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    justify-self: center;
+}
+
+.add-hf-ind:hover {
+    background-color: #2a55aa;
+}
+
+.task-header {
+    width: 80%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.596);
+    margin: 1rem auto;
+    color: #2563eb;
+    gap: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+}
+
+.each-task {
+    background-color: white;
+    color: #2a55aa;
+    border-radius: 10px;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    word-break: break-word;
+    height: auto;
+    min-height: min-content;
+}
+
+.action-tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-tab a {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: solid;
+    font-weight: bold;
+    margin: 1rem 1rem;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    border-radius: 10px;
+}
+
+.action-tab button {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: solid;
+    font-weight: bold;
+    margin: 1rem 1rem;
+    text-align: center;
+    padding: 1rem;
+    max-width: auto;
+    box-shadow: 0 10px 15px -3px rgba(30, 60, 90, 0.1);
+    border-radius: 10px;
+    border-style: none;
+}
+
+.action-tab button:hover {
+    background-color: #2a55aa;
+}
+
+
+.action-tab a:hover {
+    background-color: #2a55aa;
+}
+
+
+
+/*-----------------------For delete popup --------------------------------------------*/
+
+
+#deleteAlert-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #504f4f83;
+    justify-content: center;
+    align-items: center;
+}
+
+#deleteAlert {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.473);
+}
+
+#deleteAler-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+#NotDelete {
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    color: #2a55aa;
+    background-color: #d4e3f1;
+}
+
+#deletethis {
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    color: #2a55aa;
+    background-color: #d4e3f1;
+}
+
+#deletethis:hover {
+    color: #d4e3f1;
+    background-color: #2a55aa;
+}
+
+#NotDelete:hover {
+    color: #d4e3f1;
+    background-color: #2a55aa;
+}
+
+/*----------------------------------------------------------*/
+
+
+@media (max-width: 768px) {
+
+    .task-header {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+/*-----------------------For Alert popup --------------------------------------------*/
+
+
+#Alert-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #504f4f83;
+    justify-content: center;
+    align-items: center;
+}
+
+#Alert {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.473);
+}
+
+#Aler-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+#cancel {
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    color: #2a55aa;
+    background-color: #d4e3f1;
+}
+
+#cancel:hover {
+    color: #d4e3f1;
+    background-color: #2a55aa;
+}
+
+#confirmbtn {
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    color: #2a55aa;
+    background-color: #d4e3f1;
+}
+
+#confirmbtn:hover {
+    color: #d4e3f1;
+    background-color: #2a55aa;
+}
+
+/*----------------------------------------------------------*/
+
+
+/*------------------------profile-----------------------------*/
+.outer-profile-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    background-color: #cddceb;
+    color: #2a55aa;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.profile-card {
+    background-color: white;
+}
+
+.profiledp {
+    width: 140px;
+    height: 140px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin: 0 auto 30px auto;
+    position: relative;
+}
+
+.profiledp::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profiledp::after {
+    content: "";
+    width: 80px;
+    height: 50px;
+    border: 2px solid #000;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* verification otp */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#verification {
+    display: none;
+}
+
+/*----------------------------------------fr loader*******************************************/
+/* The container that centers the loader on the screen */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 44, 44, 0.185);
+    /* Semi-transparent white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Stay on top of everything */
+}
+
+/* The actual CSS Spinner */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #2563eb;
+    /* The "moving" color */
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Utility class to hide the loader */
+.hidden {
+    display: none;
+}
+
+.error-hidden {
+    display: none;
+    /* Keeps it out of the layout */
+}
+
+.error-visible {
+    display: block;
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    animation: shake 0.2s ease-in-out;
+    /* Optional: adds a little shake effect */
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Optional: Red border on input when invalid */
+input.invalid {
+    border: 2px solid #ff4d4d;
+    outline: none;
+}
+
+/*---------------------------------------------fr profile pg---------------*/
+/* Outer container */
+.outer-profile-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main profile container */
+.profile-container {
+    background-color: #ffffff;
+    width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    padding: 30px 25px;
+}
+
+/* Profile card */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image container */
+.img-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #2a55aa;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+    position: relative;
+}
+
+/* Profile image */
+.profiledp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+
+    display: block;
+}
+
+/* Details container */
+.detials-container {
+    width: 100%;
+}
+
+/* Each row */
+.row {
+    display: grid;
+    grid-template-columns: 120px 10px 1fr;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(42, 85, 170, 0.15);
+}
+
+/* Remove last border */
+.row:last-child {
+    border-bottom: none;
+}
+
+/* Label text */
+.label {
+    font-weight: 600;
+    color: #2a55aa;
+    font-size: 15px;
+}
+
+/* Colon */
+.colon {
+    font-weight: 600;
+    color: #2a55aa;
+}
+
+/* Value text */
+.value {
+    margin-left: 0.7rem;
+    color: #1f2937;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .profile-container {
+        width: 90%;
+        padding: 25px 20px;
+    }
+
+    .row {
+        grid-template-columns: 100px 10px 1fr;
+    }
+
+    .label,
+    .value {
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+
+.timer-section{
+    margin-top: 15px;
+  font-size: 0.9rem;
+  color: #2563eb;
+}

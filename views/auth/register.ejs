@@ -1,0 +1,25 @@
+<%- include("../partials/header") %>
+    <div class="outer-login-container">
+        <div class="login-container" id="registerform-dt">
+            <h1>REGISTER</h1>
+            <form id="registerform" onsubmit="RegisterSubmit(event)">
+                <input type="text" placeholder="Enter name" name="name" required><br>
+                <input type="text" placeholder="Enter username" name="username" id="usernamein" required maxlength="20"
+                    minlength="8"><br>
+                    <p id="error-msg" class="error-hidden">
+  </p>
+                <input type="email" placeholder="Enter email" name="email" required><br>
+                <input type="password" placeholder="Enter password" name="password" required><br>
+                <input type="password" placeholder="Re Enter password" name="repassword" required><br>
+                <button type="submit" id="sbtbtn">Register</button>
+            </form><a href="/login">Alreader a user, Login now!</a>
+        </div>
+        <div class="login-container" id="verification" >
+            <h1>EMAIL VERIFICATION</h1>
+            <form >
+                <input type="number" placeholder="Enter Security code" name="otp" required inputmode="numeric"><br>
+                <button type="submit">Submit</button>
+            </form><!--<p id="otptime" class="">Resend code in <span id="seconds">30</span>s</p><a id="resendotp" class="" onclick="resendotp(event)">Resend Code</a>-->
+        </div>
+    </div>
+    <%- include("../partials/footer") %>

@@ -1,0 +1,11 @@
+<%- include("../partials/header") %>
+<div class="outer-login-container">
+<div class="login-container">
+    <h1>LOGIN</h1>
+<form onsubmit="LoginSubmit" id="submitlogin">
+    <input type="text" placeholder="Enter your username" name="username" required maxlength="20" minlength="8"><br>
+    <input type="password" placeholder="Enter your password" name="password" required><br>
+    <button type="submit">Login</button>
+    <a  href="/register">New User, Register now!</a>
+</form></div></div>
+<%- include("../partials/footer") %>

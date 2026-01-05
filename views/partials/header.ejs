@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="outer-head">
+  <div class="header">
+    <h2>Task Manager</h2>
+    <nav>
+      <% if(locals.user) { %>
+      <a href="/">Home</a> |
+      <a href="/profile">Profile</a> |
+      <a href="#" onclick="logoutSubmit(event)">logout</a>
+      <% } else {%>
+      <a href="/">Home</a> |
+      <a href="/login">Login</a> |
+      <a href="/Register">Register</a>   
+      <% } %>     
+    </nav>
+  </div>
+</div>
+<div class="main">
